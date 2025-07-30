@@ -1,0 +1,114 @@
+﻿@model WebApplication1.Models.AppointmentModel
+
+@{
+    ViewData["Title"] = Model.AppointmentID == 0 ? "Add Appointment" : "Edit Appointment";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+<div class="pagetitle">
+    <h1>@ViewData["Title"]</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Appointment" asp-action="AppointmentList">Appointment</a></li>
+            <li class="breadcrumb-item active">@ViewData["Title"]</li>
+        </ol>
+    </nav>
+</div>
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@ViewData["Title"]</h5>
+
+                    <form method="post" asp-action="SaveAppointment" asp-controller="Appointment">
+                        <input type="hidden" name="AppointmentID" value="@Model.AppointmentID" />
+
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label">Doctor</label>
+                            <div class="col-sm-9">
+                                <select name="DoctorID" class="form-control">
+                                    <option value="">Select Doctor</option>
+                                    @foreach (System.Data.DataRow row in ViewBag.Doctors.Rows)
+                                    {
+                                        var selected = Model.DoctorID.ToString() == row["DoctorID"].ToString() ? "selected" : "";
+                                        @Html.Raw($"<option value='{row["DoctorID"]}' {selected}>{row["Name"]}</option>")
+                                    }
+                                </select>
+
+
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label">Patient</label>
+                            <div class="col-sm-9">
+                                
+                                <select name="PatientID" class="form-control">
+                                    <option value="">Select Patient</option>
+                                    @foreach (System.Data.DataRow row in ViewBag.Patients.Rows)
+                                    {
+                                        var selected = Model.PatientID.ToString() == row["PatientID"].ToString() ? "selected" : "";
+                                        @Html.Raw($"<option value='{row["PatientID"]}' {selected}>{row["Name"]}</option>")
+                                    }
+                                </select>
+
+
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label">Appointment Date</label>
+                            <div class="col-sm-9">
+                                <input type="datetime-local" name="AppointmentDate" class="form-control"
+                                       value="@Model.AppointmentDate.ToString("yyyy-MM-ddTHH:mm")" />
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label">Status</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="AppointmentStatus" class="form-control" value="@Model.AppointmentStatus" />
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label">Description</label>
+                            <div class="col-sm-9">
+                                <textarea name="Description" class="form-control">@Model.Description</textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label">Special Remarks</label>
+                            <div class="col-sm-9">
+                                <textarea name="SpecialRemarks" class="form-control">@Model.SpecialRemarks</textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label">Consulted Amount</label>
+                            <div class="col-sm-9">
+                                <input type="number" step="0.01" name="TotalConsultedAmount" class="form-control" value="@Model.TotalConsultedAmount" />
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label">Submit</label>
+                            <div class="col-sm-9">
+                                <button type="submit" class="btn btn-primary">
+                                    @(Model.AppointmentID == 0 ? "Add" : "Update")
+                                </button>
+                                <a href="/Appointment/AppointmentList" class="btn btn-secondary">Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

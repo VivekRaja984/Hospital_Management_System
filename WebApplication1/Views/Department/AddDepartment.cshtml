@@ -1,0 +1,59 @@
+﻿@model WebApplication1.Models.DepartmentModel
+
+@{
+    ViewData["Title"] = Model.DepartmentID == 0 ? "Add Department" : "Edit Department";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+<div class="pagetitle">
+    <h1>@ViewData["Title"]</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Department" asp-action="DepartmentList">Department</a></li>
+            <li class="breadcrumb-item active">@ViewData["Title"]</li>
+        </ol>
+    </nav>
+</div>
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@ViewData["Title"]</h5>
+
+                    <form method="post" asp-action="SaveDepartment" asp-controller="Department">
+                        <input type="hidden" name="DepartmentID" value="@Model.DepartmentID" />
+
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label">Department Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="DepartmentName" class="form-control" value="@Model.DepartmentName" />
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label">Description</label>
+                            <div class="col-sm-9">
+                                <textarea name="Description" class="form-control">@Model.Description</textarea>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label">Submit</label>
+                            <div class="col-sm-9">
+                                <button type="submit" class="btn btn-primary">
+                                    @(Model.DepartmentID == 0 ? "Add" : "Update")
+                                </button>
+                                <a href="/Department/DepartmentList" class="btn btn-secondary">Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

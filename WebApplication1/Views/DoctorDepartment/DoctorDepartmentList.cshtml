@@ -1,0 +1,48 @@
+﻿@model System.Data.DataTable
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<style>
+    .table thead th {
+        background-color: #212529;
+        color: white;
+    }
+</style>
+
+<div class="card">
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="card-title">Doctor Department List</h5>
+            <a class="btn btn-primary" asp-controller="DoctorDepartment" asp-action="AddDoctorDepartment">+Add Doctor Department</a>
+        </div>
+
+        <table class="table table-bordered text-center align-middle">
+            <thead>
+                <tr>
+                    <th>Doctor</th>
+                    <th>Department</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (System.Data.DataRow row in Model.Rows)
+                {
+                    <tr>
+                        <td>@row["DoctorName"]</td>
+                        <td>@row["DepartmentName"]</td>
+                        <td>
+                            <a class="btn btn-outline-success btn-sm"
+                               asp-controller="DoctorDepartment"
+                               asp-action="AddDoctorDepartment"
+                               asp-route-DoctorDepartmentID="@row["DoctorDepartmentID"]">Edit</a>
+                            <a class="btn btn-outline-danger btn-sm"
+                               asp-controller="DoctorDepartment"
+                               asp-action="Delete"
+                               asp-route-DoctorDepartmentID="@row["DoctorDepartmentID"]"
+                               onclick="return confirm('Are you sure you want to delete this entry?');">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

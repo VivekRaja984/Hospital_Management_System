@@ -1,0 +1,307 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\controllers\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\views\\appoiment\\appoimentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\appoiment\\appoimentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\views\\login\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\login\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\views\\patient\\patientlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\patient\\patientlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\controllers\\doctordepartmentcontroller1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\doctordepartmentcontroller1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\controllers\\appoiment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\appoiment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\views\\doctordepartmentcontroller1\\doctordepartmentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\doctordepartmentcontroller1\\doctordepartmentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\views\\appoiment\\appoiment1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\appoiment\\appoiment1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\views\\home\\doctor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\doctor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\views\\doctordepartmentcontroller1\\doctordepartmentadd.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\doctordepartmentcontroller1\\doctordepartmentadd.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\views\\patient\\addpatient.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\patient\\addpatient.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|c:\\users\\student\\downloads\\hospital\\webapplication1\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7E74A527-A4EB-475F-A13E-1CC3D6C5653A}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Models\\Patient.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\Patient.cs",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Models\\Patient.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\Patient.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T03:42:53.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppoimentList.cshtml",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Appoiment\\AppoimentList.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Appoiment\\AppoimentList.cshtml",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Appoiment\\AppoimentList.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Appoiment\\AppoimentList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-10T07:44:01.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Appoiment.cs",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Controllers\\Appoiment.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\Appoiment.cs",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Controllers\\Appoiment.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\Appoiment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T07:19:32.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Controllers\\Patient.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\Patient.cs",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Controllers\\Patient.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\Patient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T03:07:36.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAsBAAAAAAAAAAAAABgBAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-03T06:54:24.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Doctor.cshtml",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Home\\Doctor.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Doctor.cshtml",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Home\\Doctor.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Home\\Doctor.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-03T08:00:25.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAACwAAAAAAAAAAADwvzMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-03T07:23:59.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Appoiment1.cshtml",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Appoiment\\Appoiment1.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Appoiment\\Appoiment1.cshtml",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Appoiment\\Appoiment1.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Appoiment\\Appoiment1.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-10T07:21:10.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApplication1\\appsettings.json",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\appsettings.json",
+              "RelativeToolTip": "WebApplication1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-15T02:45:18.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T07:24:10.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PatientList.cshtml",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Patient\\PatientList.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Patient\\PatientList.cshtml",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Patient\\PatientList.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Patient\\PatientList.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-08T03:08:40.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DoctorDepartmentController1.cs",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Controllers\\DoctorDepartmentController1.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\DoctorDepartmentController1.cs",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Controllers\\DoctorDepartmentController1.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\DoctorDepartmentController1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T07:54:53.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AddPatient.cshtml",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Patient\\AddPatient.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Patient\\AddPatient.cshtml",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Patient\\AddPatient.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Patient\\AddPatient.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwC0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-08T03:50:58.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DoctorDepartmentList.cshtml",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\DoctorDepartmentController1\\DoctorDepartmentList.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\DoctorDepartmentController1\\DoctorDepartmentList.cshtml",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\DoctorDepartmentController1\\DoctorDepartmentList.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\DoctorDepartmentController1\\DoctorDepartmentList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-10T07:57:41.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Login\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Login\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Login\\Dashboard.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Login\\Dashboard.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-15T03:05:46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DoctorDepartmentAdd.cshtml",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\DoctorDepartmentController1\\DoctorDepartmentAdd.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\DoctorDepartmentController1\\DoctorDepartmentAdd.cshtml",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\DoctorDepartmentController1\\DoctorDepartmentAdd.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\DoctorDepartmentController1\\DoctorDepartmentAdd.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-10T07:55:21.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\student\\Downloads\\hospital\\WebApplication1\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-03T07:09:27.48Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

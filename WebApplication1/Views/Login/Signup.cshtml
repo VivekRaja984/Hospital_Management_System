@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Sign Up";
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+<body style="background: radial-gradient(circle at center, #f1f5f9 10%, #ffffff 80%);">
+
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card shadow-sm rounded-4" style="width: 100%; max-width: 420px;">
+
+            <!-- Header -->
+            <div class="text-white text-center py-3 rounded-top" style="background-color: #3370cc;">
+                <h5 class="mb-0 fw-semibold">Hospital Management System</h5>
+            </div>
+
+            <!-- Body -->
+            <div class="p-4">
+                
+
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="name" class="form-label fw-bold">Name</label>
+                        <input type="text" class="form-control" name="name" placeholder="Enter your name" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label fw-bold">Email</label>
+                        <input type="email" class="form-control" name="email" placeholder="Enter your email" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label fw-bold">Password</label>
+                        <div class="input-group rounded-3">
+                            <input type="password" class="form-control" name="password" placeholder="Enter your password" required />
+                            <span class="input-group-text"><i class="bi bi-eye-fill"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="role" class="form-label fw-bold">Role</label>
+                        <select class="form-select" name="role" required>
+                            <option value="" selected disabled>-- Select Role --</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Doctor">Doctor</option>
+                            <option value="Nurse">Nurse</option>
+                            <option value="Patient">Patient</option>
+                        </select>
+                    </div>
+
+                    <div class="d-grid">
+                        <button class="btn fw-semibold text-white" style="background-color: #3370cc;" type="submit">
+                            Sign Up
+                        </button>
+                    </div>
+
+                    @if (TempData["Message"] != null)
+                    {
+                        <div class="alert alert-danger mt-3" id="WrnMessage" role="alert">
+                            @TempData["Message"]
+                        </div>
+                    }
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        setTimeout(() => {
+            var msg = document.getElementById("WrnMessage");
+            if (msg) {
+                msg.style.display = "none";
+            }
+        }, 3000);
+    </script>
+</body>

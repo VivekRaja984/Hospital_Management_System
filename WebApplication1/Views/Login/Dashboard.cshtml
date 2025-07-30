@@ -1,0 +1,107 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+<style>
+    .dashboard-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        text-align: center;
+    }
+
+    .status-pill {
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 0.85rem;
+    }
+
+    .status-pending {
+        background-color: #ffeeba;
+        color: #856404;
+    }
+
+    .table thead th {
+        background-color: #212529;
+        color: white;
+    }
+</style>
+
+<div class="container mt-5">
+    <h3 class="fw-bold">Admin Dashboard</h3>
+
+    <!-- Dashboard Summary Cards -->
+    <div class="row my-4">
+        <div class="col-md-4 mb-3">
+            <div class="dashboard-card">
+                <h5>Total Appointments</h5>
+                <h2>2</h2>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="dashboard-card">
+                <h5>Completed Appointments</h5>
+                <h2>0</h2>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="dashboard-card">
+                <h5>Pending Appointments</h5>
+                <h2>2</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Today's Appointments Table -->
+    <h5 class="mb-3">Today's Appointments</h5>
+    <div class="table-responsive">
+        <table class="table table-bordered text-center align-middle">
+            <thead>
+                <tr>
+                    <th>Doctor</th>
+                    <th>Patient</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Change Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dr. Alice Smith</td>
+                    <td>Mike Wilson</td>
+                    <td>09-06-2025</td>
+                    <td><span class="status-pill status-pending">Pending</span></td>
+                    <td>
+                        <div class="d-flex justify-content-center align-items-center gap-2">
+                            <select class="form-select form-select-sm" style="width: 120px;">
+                                <option selected>Pending</option>
+                                <option>Completed</option>
+                            </select>
+                            <button class="btn btn-primary btn-sm">Update</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dr. Emily Brown</td>
+                    <td>Linda Carter</td>
+                    <td>09-06-2025</td>
+                    <td><span class="status-pill status-pending">Pending</span></td>
+                    <td>
+                        <div class="d-flex justify-content-center align-items-center gap-2">
+                            <select class="form-select form-select-sm" style="width: 120px;">
+                                <option selected>Pending</option>
+                                <option>Completed</option>
+                            </select>
+                            <button class="btn btn-primary btn-sm">Update</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

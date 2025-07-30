@@ -1,0 +1,74 @@
+﻿@model WebApplication1.Models.DoctorDepartment
+
+@{
+    ViewData["Title"] = Model.DoctorDepartmentID == 0 ? "Add Doctor Department" : "Edit Doctor Department";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="pagetitle">
+    <h1>@ViewData["Title"]</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="DoctorDepartment" asp-action="DoctorDepartmentList">DoctorDepartment</a></li>
+            <li class="breadcrumb-item active">@ViewData["Title"]</li>
+        </ol>
+    </nav>
+</div>
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@ViewData["Title"]</h5>
+
+                    <form method="post" asp-action="SaveDoctorDepartment" asp-controller="DoctorDepartment">
+
+                        <input type="hidden" name="DoctorDepartmentID" value="@Model.DoctorDepartmentID" />
+
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label">Doctor</label>
+                            <div class="col-sm-9">
+                                <select name="DoctorID" class="form-control">
+                                    <option value="">Select Doctor</option>
+                                    @foreach (System.Data.DataRow row in ViewBag.Doctors.Rows)
+                                    {
+                                        var selected = Model.DoctorID.ToString() == row["DoctorID"].ToString() ? "selected" : "";
+                                        @Html.Raw($"<option value='{row["DoctorID"]}' {selected}>{row["Name"]}</option>")
+                                    }
+                                </select>
+
+
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-3 col-form-label">Department</label>
+                            <div class="col-sm-9">
+                                <select name="DepartmentID" class="form-control">
+                                    <option value="">Select Department</option>
+                                    @foreach (System.Data.DataRow row in ViewBag.Departments.Rows)
+                                    {
+                                        var selected = Model.DepartmentID.ToString() == row["DepartmentID"].ToString() ? "selected" : "";
+                                        @Html.Raw($"<option value='{row["DepartmentID"]}' {selected}>{row["DepartmentName"]}</option>")
+                                    }
+                                </select>
+
+                            </div>
+                        </div>
+                        
+
+                        <div class="row mb-3">
+                            <div class="col-sm-9 offset-sm-3">
+                                <button type="submit" class="btn btn-primary">@(Model.DoctorDepartmentID == 0 ? "Add" : "Update")</button>
+                                <a href="/DoctorDepartment/DoctorDepartmentList" class="btn btn-secondary">Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

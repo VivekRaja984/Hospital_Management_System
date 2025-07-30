@@ -1,0 +1,118 @@
+﻿@model WebApplication1.Models.PatientModel
+
+@{
+    ViewData["Title"] = Model.PatientID == 0 ? "Add Patient" : "Edit Patient";
+}
+
+<div class="pagetitle">
+    <h1>@ViewData["Title"]</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Patient" asp-action="PatientList">Patient</a></li>
+            <li class="breadcrumb-item active">@ViewData["Title"]</li>
+        </ol>
+    </nav>
+</div>
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@ViewData["Title"]</h5>
+
+                    <form method="post" asp-action="SavePatient" asp-controller="Patient">
+                        <input type="hidden" name="PatientID" value="@Model.PatientID" />
+
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="Name" class="form-control" value="@Model.Name" />
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" name="Email" class="form-control" value="@Model.Email" />
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Phone</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="Phone" class="form-control" value="@Model.Phone" />
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Date of Birth</label>
+                            <div class="col-sm-10">
+                                <input type="date" name="DateOfBirth" class="form-control"
+                                       value="value=" @Model.DateOfBirth"
+                                       "  />
+
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Gender</label>
+                            <div class="col-sm-10">
+                                <select name="Gender" class="form-select">
+                                    <option value="">-- Select Gender --</option>
+                                    @if (Model.Gender == "Male")
+                                    {
+                                        <option value="Male" selected>Male</option>
+                                        <option value="Female">Female</option>
+                                    }
+                                    else if (Model.Gender == "Female")
+                                    {
+                                        <option value="Male">Male</option>
+                                        <option value="Female" selected>Female</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    }
+                                </select>
+
+
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Address</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="Address" class="form-control" value="@Model.Address" />
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">City</label>
+                            <div class="col-sm-10">
+                                <input type="text"  name="City" class="form-control" value="@Model.City" />
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">State</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="State" class="form-control" value="@Model.State" />
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-sm-10 offset-sm-2">
+                                <button type="submit" class="btn btn-primary">
+                                    @(Model.PatientID == 0 ? "Add" : "Update")
+                                </button>
+                                <a href="/Patient/PatientList" class="btn btn-secondary">Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
