@@ -30,7 +30,7 @@
                         <div class="row mb-3">
                             <label class="col-sm-3 col-form-label">Doctor</label>
                             <div class="col-sm-9">
-                                <select name="DoctorID" class="form-control">
+                                <select name="DoctorID" class="form-control" required>
                                     <option value="">Select Doctor</option>
                                     @foreach (System.Data.DataRow row in ViewBag.Doctors.Rows)
                                     {
@@ -38,15 +38,13 @@
                                         @Html.Raw($"<option value='{row["DoctorID"]}' {selected}>{row["Name"]}</option>")
                                     }
                                 </select>
-
-
                             </div>
                         </div>
 
                         <div class="row mb-3">
                             <label class="col-sm-3 col-form-label">Department</label>
                             <div class="col-sm-9">
-                                <select name="DepartmentID" class="form-control">
+                                <select name="DepartmentID" class="form-control" required>
                                     <option value="">Select Department</option>
                                     @foreach (System.Data.DataRow row in ViewBag.Departments.Rows)
                                     {
@@ -54,10 +52,8 @@
                                         @Html.Raw($"<option value='{row["DepartmentID"]}' {selected}>{row["DepartmentName"]}</option>")
                                     }
                                 </select>
-
                             </div>
                         </div>
-                        
 
                         <div class="row mb-3">
                             <div class="col-sm-9 offset-sm-3">

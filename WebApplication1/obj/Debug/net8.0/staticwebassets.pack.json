@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets\\assets\\img\\logo.png"
     },
     {
+      "Id": "F:\\WebApplication1\\WebApplication1\\wwwroot\\assets\\img\\logo1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo1.png"
+    },
+    {
+      "Id": "F:\\WebApplication1\\WebApplication1\\wwwroot\\assets\\img\\logo3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo3.png"
+    },
+    {
       "Id": "F:\\WebApplication1\\WebApplication1\\wwwroot\\assets\\img\\messages-1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\messages-1.jpg"
     },

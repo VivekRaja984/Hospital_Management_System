@@ -65,7 +65,7 @@ namespace WebApplication1.Controllers
        [HttpPost]
 public IActionResult SaveDoctorDepartment(DoctorDepartment model)
 {
-    // ✅ Manual validation check for dropdowns
+    
     if (model.DoctorID == 0 || model.DepartmentID == 0)
     {
         ModelState.AddModelError("", "Please select Doctor and Department.");
@@ -74,7 +74,7 @@ public IActionResult SaveDoctorDepartment(DoctorDepartment model)
         return View("AddDoctorDepartment", model);
     }
 
-    // ✅ Proceed only if manual validation passed
+    
     string connStr = _configuration.GetConnectionString("DefaultConnection");
     using SqlConnection conn = new SqlConnection(connStr);
     conn.Open();

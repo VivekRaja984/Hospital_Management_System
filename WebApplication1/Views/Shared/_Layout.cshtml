@@ -25,6 +25,64 @@
     <link href="~/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
     <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="~/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <style>
+/* Modern Sidebar Styling */
+.sidebar {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    margin: 10px;
+    padding-top: 15px;
+}
+.sidebar .nav-item {
+    margin-bottom: 10px;
+}
+.sidebar .nav-link {
+    border-radius: 8px;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+}
+.sidebar .nav-link:hover {
+    background: #f0f4ff;
+    color: #003580;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(90deg, #0066cc, #3399ff);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.header .logo span {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Profile and dropdown */
+.nav-profile img {
+    border: 2px solid #fff;
+}
+.nav-profile span {
+    color: #fff;
+}
+
+/* Footer */
+.footer {
+    background: #f8f9fa;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #eaeaea;
+}
+
+/* Main content padding */
+.main {
+    padding: 25px;
+    background-color: #f9fbff;
+    min-height: 100vh;
+}
+</style>
 
     <!-- Template Main CSS File -->
     <link href="~/assets/css/style.css" rel="stylesheet">
@@ -252,7 +310,7 @@
 
         <div class="d-flex align-items-center justify-content-between">
             <a asp-action="Dashboard" asp-controller="Login" class="logo d-flex align-items-center">
-                <img src="~/assets/img/logo.png" alt="">
+                <img src="~/assets/img/logo3.png" alt="">
                 <span class="d-none d-lg-block">VR Hospital</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -426,6 +484,8 @@
 
     <!-- Template Main JS File -->
     <script src="~/assets/js/main.js"></script>
+    @RenderSection("Scripts", required: false)
+
 
 </body>
 

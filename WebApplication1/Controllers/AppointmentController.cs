@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
 using System.Data;
 using WebApplication1.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace WebApplication1.Controllers
 {
@@ -70,7 +71,7 @@ namespace WebApplication1.Controllers
 
             ViewBag.Doctors = GetDoctors();
             ViewBag.Patients = GetPatients();
-
+            
             return View(model);
         }
 
@@ -133,6 +134,7 @@ namespace WebApplication1.Controllers
             
             ViewBag.Doctors = GetDoctors();
             ViewBag.Patients = GetPatients();
+            
             return View("AddAppointment", model);
         }
 

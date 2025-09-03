@@ -25,84 +25,74 @@
                     <h5 class="card-title">@ViewData["Title"]</h5>
 
                     <form method="post" asp-action="SaveAppointment" asp-controller="Appointment">
-                        <input type="hidden" name="AppointmentID" value="@Model.AppointmentID" />
+                        <input type="hidden" asp-for="AppointmentID" />
 
                         <div class="row mb-3">
-                            <label class="col-sm-3 col-form-label">Doctor</label>
+                            <label asp-for="DoctorID" class="col-sm-3 col-form-label"></label>
                             <div class="col-sm-9">
-                                <select name="DoctorID" class="form-control">
+                                <select asp-for="DoctorID" class="form-control" asp-items="ViewBag.DoctorsList">
                                     <option value="">Select Doctor</option>
-                                    @foreach (System.Data.DataRow row in ViewBag.Doctors.Rows)
-                                    {
-                                        var selected = Model.DoctorID.ToString() == row["DoctorID"].ToString() ? "selected" : "";
-                                        @Html.Raw($"<option value='{row["DoctorID"]}' {selected}>{row["Name"]}</option>")
-                                    }
                                 </select>
-
-
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-sm-3 col-form-label">Patient</label>
-                            <div class="col-sm-9">
                                 
-                                <select name="PatientID" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label asp-for="PatientID" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-9">
+                                <select asp-for="PatientID" class="form-control" asp-items="ViewBag.PatientsList">
                                     <option value="">Select Patient</option>
-                                    @foreach (System.Data.DataRow row in ViewBag.Patients.Rows)
-                                    {
-                                        var selected = Model.PatientID.ToString() == row["PatientID"].ToString() ? "selected" : "";
-                                        @Html.Raw($"<option value='{row["PatientID"]}' {selected}>{row["Name"]}</option>")
-                                    }
                                 </select>
-
-
+                                
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-sm-3 col-form-label">Appointment Date</label>
+                            <label asp-for="AppointmentDate" class="col-sm-3 col-form-label"></label>
                             <div class="col-sm-9">
-                                <input type="datetime-local" name="AppointmentDate" class="form-control"
-                                       value="@Model.AppointmentDate.ToString("yyyy-MM-ddTHH:mm")" />
+                                <input asp-for="AppointmentDate" type="datetime-local" class="form-control" />
+                                <span asp-validation-for="AppointmentDate" class="text-danger"></span>
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-sm-3 col-form-label">Status</label>
+                            <label asp-for="AppointmentStatus" class="col-sm-3 col-form-label"></label>
                             <div class="col-sm-9">
-                                <input type="text" name="AppointmentStatus" class="form-control" value="@Model.AppointmentStatus" />
+                                <input asp-for="AppointmentStatus" class="form-control" />
+                                <span asp-validation-for="AppointmentStatus" class="text-danger"></span>
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-sm-3 col-form-label">Description</label>
+                            <label asp-for="Description" class="col-sm-3 col-form-label"></label>
                             <div class="col-sm-9">
-                                <textarea name="Description" class="form-control">@Model.Description</textarea>
+                                <textarea asp-for="Description" class="form-control" maxlength="250"></textarea>
+                                <span asp-validation-for="Description" class="text-danger"></span>
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-sm-3 col-form-label">Special Remarks</label>
+                            <label asp-for="SpecialRemarks" class="col-sm-3 col-form-label"></label>
                             <div class="col-sm-9">
-                                <textarea name="SpecialRemarks" class="form-control">@Model.SpecialRemarks</textarea>
+                                <textarea asp-for="SpecialRemarks" class="form-control" maxlength="250"></textarea>
+                                <span asp-validation-for="SpecialRemarks" class="text-danger"></span>
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-sm-3 col-form-label">Consulted Amount</label>
+                            <label asp-for="TotalConsultedAmount" class="col-sm-3 col-form-label"></label>
                             <div class="col-sm-9">
-                                <input type="number" step="0.01" name="TotalConsultedAmount" class="form-control" value="@Model.TotalConsultedAmount" />
+                                <input asp-for="TotalConsultedAmount" type="number" step="0.01" class="form-control" />
+                                <span asp-validation-for="TotalConsultedAmount" class="text-danger"></span>
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-sm-3 col-form-label">Submit</label>
-                            <div class="col-sm-9">
+                            <div class="col-sm-9 offset-sm-3">
                                 <button type="submit" class="btn btn-primary">
                                     @(Model.AppointmentID == 0 ? "Add" : "Update")
                                 </button>
-                                <a href="/Appointment/AppointmentList" class="btn btn-secondary">Cancel</a>
+                                <a asp-controller="Appointment" asp-action="AppointmentList" class="btn btn-secondary">Cancel</a>
                             </div>
                         </div>
                     </form>
@@ -112,3 +102,7 @@
         </div>
     </div>
 </section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -30,14 +30,15 @@
                         <div class="row mb-3">
                             <label class="col-sm-3 col-form-label">Department Name</label>
                             <div class="col-sm-9">
-                                <input type="text" name="DepartmentName" class="form-control" value="@Model.DepartmentName" />
+                                <input type="text" name="DepartmentName" class="form-control"
+                                       value="@Model.DepartmentName" required maxlength="100" />
                             </div>
                         </div>
 
                         <div class="row mb-3">
                             <label class="col-sm-3 col-form-label">Description</label>
                             <div class="col-sm-9">
-                                <textarea name="Description" class="form-control">@Model.Description</textarea>
+                                <textarea name="Description" class="form-control" maxlength="250">@Model.Description</textarea>
                             </div>
                         </div>
 
