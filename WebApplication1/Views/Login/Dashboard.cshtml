@@ -38,67 +38,49 @@
         <div class="col-md-4 mb-3">
             <div class="dashboard-card">
                 <h5>Total Appointments</h5>
-                <h2>2</h2>
+                <h2>@ViewBag.TotalAppointments</h2>
             </div>
         </div>
         <div class="col-md-4 mb-3">
             <div class="dashboard-card">
                 <h5>Completed Appointments</h5>
-                <h2>0</h2>
+                <h2>@ViewBag.CompletedCount</h2>
             </div>
         </div>
         <div class="col-md-4 mb-3">
             <div class="dashboard-card">
                 <h5>Pending Appointments</h5>
-                <h2>2</h2>
+                <h2>@ViewBag.PendingCount</h2>
             </div>
         </div>
     </div>
 
     <!-- Today's Appointments Table -->
-    <h5 class="mb-3">Today's Appointments</h5>
+    <h5 class="mb-3">Appointments</h5>
     <div class="table-responsive">
         <table class="table table-bordered text-center align-middle">
-            <thead>
+            <thead class="bg-dark text-white">
                 <tr>
-                    <th>Doctor</th>
-                    <th>Patient</th>
+                    <th>Doctor Name</th>
+                    <th>Patient Name</th>
                     <th>Date</th>
                     <th>Status</th>
-                    <th>Change Status</th>
+                    <th>Amount</th>
+                    
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Dr. Alice Smith</td>
-                    <td>Mike Wilson</td>
-                    <td>09-06-2025</td>
-                    <td><span class="status-pill status-pending">Pending</span></td>
-                    <td>
-                        <div class="d-flex justify-content-center align-items-center gap-2">
-                            <select class="form-select form-select-sm" style="width: 120px;">
-                                <option selected>Pending</option>
-                                <option>Completed</option>
-                            </select>
-                            <button class="btn btn-primary btn-sm">Update</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Dr. Emily Brown</td>
-                    <td>Linda Carter</td>
-                    <td>09-06-2025</td>
-                    <td><span class="status-pill status-pending">Pending</span></td>
-                    <td>
-                        <div class="d-flex justify-content-center align-items-center gap-2">
-                            <select class="form-select form-select-sm" style="width: 120px;">
-                                <option selected>Pending</option>
-                                <option>Completed</option>
-                            </select>
-                            <button class="btn btn-primary btn-sm">Update</button>
-                        </div>
-                    </td>
-                </tr>
+                @foreach (System.Data.DataRow row in Model.Rows)
+                {
+                    <tr>
+                        <td>@row["DoctorName"]</td>
+                        <td>@row["PatientName"]</td>
+                        <td>@Convert.ToDateTime(row["AppointmentDate"]).ToString("dd-MM-yyyy hh:mm tt")</td>
+                        <td>@row["AppointmentStatus"]</td>
+                        <td>@row["TotalConsultedAmount"]</td>
+                       
+                    </tr>
+                }
             </tbody>
         </table>
     </div>

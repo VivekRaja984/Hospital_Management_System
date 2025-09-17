@@ -16,26 +16,39 @@ namespace WebApplication1.Controllers
             _configuration = configuration;
         }
 
-        public IActionResult AppointmentList()
+        public IActionResult AppointmentList(string statusFilter, int? doctorId, int? patientId)
         {
             string connectionstr = _configuration.GetConnectionString("DefaultConnection");
 
-            SqlConnection conn = new SqlConnection(connectionstr);
-            conn.Open();
-
-            SqlCommand objCmd = conn.CreateCommand();
-            objCmd.CommandType = CommandType.StoredProcedure;
-            objCmd.CommandText = "PR_Appointment_SelectAll";
-
-            SqlDataReader objSDR = objCmd.ExecuteReader();
-
             DataTable dt = new DataTable();
-            dt.Load(objSDR);
 
-            conn.Close();
+            using (SqlConnection conn = new SqlConnection(connectionstr))
+            {
+                conn.Open();
+
+                SqlCommand objCmd = conn.CreateCommand();
+                objCmd.CommandType = CommandType.StoredProcedure;
+                objCmd.CommandText = "PR_Appointment_SelectAll";
+
+                
+                if (!string.IsNullOrEmpty(statusFilter))
+                    objCmd.Parameters.AddWithValue("@Status", statusFilter);
+                if (doctorId.HasValue)
+                    objCmd.Parameters.AddWithValue("@DoctorID", doctorId.Value);
+                if (patientId.HasValue)
+                    objCmd.Parameters.AddWithValue("@PatientID", patientId.Value);
+
+                SqlDataReader objSDR = objCmd.ExecuteReader();
+                dt.Load(objSDR);
+            }
+            
+            ViewBag.Doctors = GetDoctors();   
+            ViewBag.Patients = GetPatients(); 
+            ViewBag.StatusList = new List<string> { "Pending", "Completed" };
 
             return View(dt);
         }
+
 
         public IActionResult AddAppointment(int? AppointmentID)
         {
@@ -139,17 +152,17 @@ namespace WebApplication1.Controllers
         }
 
             private DataTable GetDoctors()
-        {
-            DataTable dt = new DataTable();
-            string connectionstr = _configuration.GetConnectionString("DefaultConnection");
-            using SqlConnection conn = new SqlConnection(connectionstr);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("PR_Doctor_SelectAll", conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            SqlDataReader reader = cmd.ExecuteReader();
-            dt.Load(reader);
-            return dt;
-        }
+            {
+                DataTable dt = new DataTable();
+                string connectionstr = _configuration.GetConnectionString("DefaultConnection");
+                using SqlConnection conn = new SqlConnection(connectionstr);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("PR_Doctor_SelectAll", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
 
         private DataTable GetPatients()
         {

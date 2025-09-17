@@ -16,11 +16,57 @@
         <h5 class="card-title">Appointment List</h5>
         <a class="btn btn-primary" asp-controller="Appointment" asp-action="AddAppointment">+Add Appointment</a>
         </div>
+        <form method="get" asp-action="AppointmentList" asp-controller="Appointment" class="row g-3 mb-3">
+
+            <div class="col-md-3">
+                <select name="doctorId" class="form-select">
+                    <option value="">-- Select Doctor --</option>
+                    @foreach (System.Data.DataRow row in ViewBag.Doctors.Rows)
+                    {
+                        <option value="@row["DoctorID"]">@row["Name"]</option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <select name="patientId" class="form-select">
+                    <option value="">-- Select Patient --</option>
+                    @foreach (System.Data.DataRow row in ViewBag.Patients.Rows)
+                    {
+                        <option value="@row["PatientID"]">@row["Name"]</option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <select name="statusFilter" class="form-select">
+                    <option value="">-- Select Status --</option>
+                    @foreach (var status in ViewBag.StatusList)
+                    {
+                        <option value="@status">@status</option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-primary">Filter</button>
+                <a asp-action="AppointmentList" class="btn btn-secondary">Reset</a>
+            </div>
+
+        </form>
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["SuccessMessage"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
         <table class="table table-bordered text-center align-middle">
             <thead class="bg-dark text-white">
                 <tr>
-                    <th>Doctor ID</th>
-                    <th>Patient ID</th>
+                    <th>Doctor Name</th>
+                    <th>Patient Name</th>
                     <th>Date</th>
                     <th>Status</th>
                     <th>Amount</th>
@@ -31,8 +77,8 @@
                 @foreach (System.Data.DataRow row in Model.Rows)
                 {
                     <tr>
-                        <td>@row["DoctorID"]</td>
-                        <td>@row["PatientID"]</td>
+                        <td>@row["DoctorName"]</td>
+                        <td>@row["PatientName"]</td>
                         <td>@Convert.ToDateTime(row["AppointmentDate"]).ToString("dd-MM-yyyy hh:mm tt")</td>
                         <td>@row["AppointmentStatus"]</td>
                         <td>@row["TotalConsultedAmount"]</td>

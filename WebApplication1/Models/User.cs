@@ -7,8 +7,6 @@ namespace WebApplication1.Models
     {
         public int UserId { get; set; }
 
-        [Required]
-        [MaxLength(100)]
         public string Username { get; set; }
 
         [Required]
@@ -20,8 +18,7 @@ namespace WebApplication1.Models
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required]
-        [MaxLength(100)]
+        
         public string MobileNo { get; set; }
 
         public bool IsActive { get; set; }

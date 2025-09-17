@@ -28,22 +28,30 @@
                         <input type="hidden" asp-for="AppointmentID" />
 
                         <div class="row mb-3">
-                            <label asp-for="DoctorID" class="col-sm-3 col-form-label"></label>
+                            <label class="col-sm-3 col-form-label">Select Doctor</label>
                             <div class="col-sm-9">
-                                <select asp-for="DoctorID" class="form-control" asp-items="ViewBag.DoctorsList">
+                                <select name="DoctorID" class="form-control" required>
                                     <option value="">Select Doctor</option>
+                                    @foreach (System.Data.DataRow row in ViewBag.Doctors.Rows)
+                                    {
+                                        var selected = Model.DoctorID.ToString() == row["DoctorID"].ToString() ? "selected" : "";
+                                        @Html.Raw($"<option value='{row["DoctorID"]}' {selected}>{row["Name"]}</option>")
+                                    }
                                 </select>
-                                
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label asp-for="PatientID" class="col-sm-3 col-form-label"></label>
+                            <label class="col-sm-3 col-form-label">Select Patient</label>
                             <div class="col-sm-9">
-                                <select asp-for="PatientID" class="form-control" asp-items="ViewBag.PatientsList">
+                                <select name="PatientID" class="form-control" required>
                                     <option value="">Select Patient</option>
+                                    @foreach (System.Data.DataRow row in ViewBag.Patients.Rows)
+                                    {
+                                        var selected = Model.PatientID.ToString() == row["PatientID"].ToString() ? "selected" : "";
+                                        @Html.Raw($"<option value='{row["PatientID"]}' {selected}>{row["Name"]}</option>")
+                                    }
                                 </select>
-                                
                             </div>
                         </div>
 
@@ -56,12 +64,30 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label asp-for="AppointmentStatus" class="col-sm-3 col-form-label"></label>
+                            <label class="col-sm-3 col-form-label">Appointment Status</label>
                             <div class="col-sm-9">
-                                <input asp-for="AppointmentStatus" class="form-control" />
-                                <span asp-validation-for="AppointmentStatus" class="text-danger"></span>
+                                <select name="AppointmentStatus" class="form-select">
+                                    <option value="">-- Select Status --</option>
+                                    @if (Model.AppointmentStatus == "Pending")
+                                    {
+                                        <option value="Pending" selected>Pending</option>
+                                        <option value="Completed">Completed</option>
+                                    }
+                                    else if (Model.AppointmentStatus == "Completed")
+                                    {
+                                        <option value="Pending">Pending</option>
+                                        <option value="Completed" selected>Completed</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="Pending">Pending</option>
+                                        <option value="Completed">Completed</option>
+                                    }
+                                </select>
+                                @Html.ValidationMessageFor(m => m.AppointmentStatus, "", new { @class = "text-danger" })
                             </div>
                         </div>
+
 
                         <div class="row mb-3">
                             <label asp-for="Description" class="col-sm-3 col-form-label"></label>
